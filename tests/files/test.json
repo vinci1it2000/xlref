@@ -1,0 +1,4 @@
+{
+  "excel.xlsx#ref!N6(RD)[\"item\"]": "excel.xlsx#ref!E7:LURD",
+  "test": ["test.xlsx#Sheet1!A1:B_[\"recursive\", \"dict\"]"]
+}
