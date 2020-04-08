@@ -1,6 +1,5 @@
 schedula[sphinx] >= 1.1.1
 sphinx-click
-matplotlib
 scipy
 pandas
 click

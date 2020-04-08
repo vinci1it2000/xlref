@@ -3,5 +3,4 @@
 nose
 coveralls
 ddt
-dill
 schedula[sphinx] >= 1.1.1

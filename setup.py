@@ -125,7 +125,6 @@ if __name__ == '__main__':
             'click-log',
             'schedula>=1.1.1',
             'numpy',
-            'openpyxl',
             'pandas'
         ],
         entry_points={

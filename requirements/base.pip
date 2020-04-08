@@ -1,5 +1,4 @@
 numpy
-openpyxl
 pandas
 schedula>=1.1.1
 click
