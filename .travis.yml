@@ -50,6 +50,7 @@ matrix:
 # command to install dependencies
 install:
   - if [[ $EXTRAS == 'all' ]]; then pip install sphinx; fi
+  - if [[ $EXTRAS == 'dev' ]]; then pip install -r requirements/dev.pip; fi
   - pip install -r requirements/test.pip
   - pip install -e .[$EXTRAS]
 
