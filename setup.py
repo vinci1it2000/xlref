@@ -125,7 +125,8 @@ if __name__ == '__main__':
             'click-log',
             'schedula>=1.1.1',
             'numpy',
-            'pandas'
+            'pandas',
+            'xlrd'
         ],
         entry_points={
             'console_scripts': [
