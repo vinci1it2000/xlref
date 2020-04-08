@@ -14,7 +14,7 @@ __version__ = version = "1.0.0"  # Also update README.rst
 
 # Please UPDATE TIMESTAMP WHEN BUMPING VERSIONS AND BEFORE RELEASE.
 #: Release date.
-__updated__ = "2020-04-07 16:00:00"
+__updated__ = "2020-04-09 12:30:00"
 
 __title__ = 'xlref'
 
