@@ -53,7 +53,6 @@ Or download the last git version and use (with root privileges):
 
 .. _end-install:
 .. _start-syntax:
-.. _start-1-pypi:
 
 Reference Syntax
 ================
@@ -65,6 +64,7 @@ non-empty cells of the targeted excel-sheet. The syntax is defined as follows:
 .. note:: The fields between square parenthesis are optionals.
 
 Follows the description of the parameters:
+
     - **excel**: excel file path relative to the parent reference file
       directory. If not defined, the parent reference excel is inherited.
     - **sheet**: excel sheet name if not defined, the parent reference excel
@@ -120,6 +120,7 @@ The library performs the following steps to read a reference:
 
 .. _end-syntax:
 .. _start-tutorial:
+.. _start-1-pypi:
 
 Tutorial
 ========
@@ -153,8 +154,8 @@ references. To parse it recursively, there are two options:
         [4.0, 5.0, 6.0],
         [7.0, 8.0, 9.0]]
 
-    2. apply a filter onto dictionary' values using the extra functionality of the
-       "dict" filter:
+    2. apply a filter onto dictionary' values using the extra functionality of
+       the "dict" filter:
 
        >>> values = xl.Ref(_ref % '{"fun": "dict", "value":"ref"}').values
        >>> values['st-cell-move'].tolist()
@@ -176,7 +177,7 @@ follows:
     45.0
 
 .. _end-tutorial:
-.. _end-pypi:
+.. _end-1-pypi:
 .. _start-badges:
 
 .. |travis_status| image:: https://travis-ci.org/vinci1it2000/xlref.svg?branch=master
