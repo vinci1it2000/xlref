@@ -41,9 +41,11 @@ class TestCMD(unittest.TestCase):
             ([], 2, 0),
             (['out.json', '-v', 'DEBUG'], 0, 1),
             (['out1.json',
-              '%s#ref!B2:C_[{"fun":"dict","key":"lower","value":"ref"}]' %
+              '%s#ReF!B2:C_[{"fun":"dict","key":"lower","value":"ref"}]' %
               files['xl']], 0, 1),
-            (['out2.json'] + ['%s#origin!A1["recursive"]' % files['xl']] * 2, 0, 1),
+            (['out2.json'] + [
+                '%s#origin!A1["recursive"]' % files['xl']
+            ] * 2, 0, 1),
             (['out3.json', '%s#origin!A1["recursive"]' % files['xl'], '-F',
               files['json']], 0, 1),
             (['out4.json', '-F', files['json'], '-F', files['json']], 0, 1),

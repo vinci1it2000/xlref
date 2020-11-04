@@ -131,9 +131,12 @@ class Ref:
 
     def _open_workbook(self, fpath):
         from pandas import ExcelFile
-        return ExcelFile(fpath, self._engine)
+        wb = ExcelFile(fpath, self._engine)
+        wb.sheet_indices = {k.lower(): i for i, k in enumerate(wb.sheet_names)}
+        return wb
 
     def _open_sheet(self, workbook, name):
+        name = getattr(workbook, 'sheet_indices', {}).get(name, name)
         return workbook.parse(name, **self._open_sheet_kw).values
 
     @property
@@ -160,7 +163,7 @@ class Ref:
         if 'xl_sheet' not in self.ref:
             sn = self.ref['sheet']
             if sn:
-                wb = self.book
+                wb, sn = self.book, sn.lower()
                 if (wb, sn) in self.cache:
                     sheet = self.cache[(wb, sn)]
                 else:
