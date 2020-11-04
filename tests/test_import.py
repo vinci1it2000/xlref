@@ -32,3 +32,13 @@ class TestImport(unittest.TestCase):
         os.environ['IMPORT_ALL'] = 'False'
         mdl = self.reload()
         self.assertTrue(set(mdl.__all__).isdisjoint(mdl.__dict__))
+
+        with self.assertRaises(AttributeError):
+            getattr(mdl, 'ciao')
+
+    def test_dir(self):
+        self.assertEqual(dir(self.mdl), [
+            'FILTERS', 'Ref', 'XlParserError', '__author__', '__copyright__',
+            '__doc__', '__license__', '__title__', '__updated__', '__version__',
+            'dsp'
+        ])

@@ -61,3 +61,10 @@ class TestCMD(unittest.TestCase):
             if osp.isfile(res):
                 with open(res) as e, open(args[0]) as r:
                     self.assertEqual(json.load(e), json.load(r))
+
+
+@ddt.ddt
+class TestRange(unittest.TestCase):
+    def test_range_repr(self):
+        from xlref.parser import Range
+        self.assertEqual(str(Range((1, 2), (5, 6))), 'C2:G6')
