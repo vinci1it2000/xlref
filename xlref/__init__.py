@@ -16,7 +16,7 @@ Modules:
 
 .. autosummary::
     :nosignatures:
-    :toctree: _build/xlref
+    :toctree: toctree/xlref
 
     cli
     errors
