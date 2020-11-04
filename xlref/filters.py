@@ -105,7 +105,7 @@ def recursive(parent, x):
 FILTERS['recursive'] = recursive
 
 
-def fdict(parent, x, key=None, value=None):
+def fdict(parent, x, key=None, value=None, merge=False):
     """
     Convert the input array into a dictionary.
 
@@ -125,12 +125,26 @@ def fdict(parent, x, key=None, value=None):
         Filter applied to values.
     :type value: str|dict
 
+    :param merge:
+        Filter applied to values.
+    :type merge: bool
+
     :return:
         Parsed dictionary.
     :rtype: dict
     """
     from pandas import isnull
-    d = {v[0]: v[1] if len(v) == 2 else v[1:] for v in x if not isnull(v[0])}
+    it = [(v[0], v[1] if len(v) == 2 else v[1:]) for v in x if not isnull(v[0])]
+    if merge:
+        d = {}
+        for k, v in it:
+            k = ref(parent, k)
+            if isinstance(k, dict):
+                d.update(k)
+            else:
+                d[k] = v
+    else:
+        d = {k: v for k, v in it}
     if key is not None:
         fun = FILTERS[key]
         d = {fun(parent, k): v for k, v in d.items()}
