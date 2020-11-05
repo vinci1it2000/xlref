@@ -9,8 +9,8 @@
 """
 It provides functions implementations to filter the parsed data.
 """
-
 import numpy as np
+import schedula as sh
 from .errors import InvalidReference, NoFullCell
 
 
@@ -105,7 +105,15 @@ def recursive(parent, x):
 FILTERS['recursive'] = recursive
 
 
-def fdict(parent, x, key=None, value=None, merge=False):
+def _kv(it):
+    for k, v in it:
+        if isinstance(k, dict):
+            yield from k.items()
+        else:
+            yield k, v
+
+
+def fdict(parent, x, key=None, value=None):
     """
     Convert the input array into a dictionary.
 
@@ -119,39 +127,23 @@ def fdict(parent, x, key=None, value=None, merge=False):
 
     :param key:
         Filter applied to keys.
-    :type key: str|dict
+    :type key: str|list
 
     :param value:
         Filter applied to values.
-    :type value: str|dict
-
-    :param merge:
-        Filter applied to values.
-    :type merge: bool
+    :type value: str|list
 
     :return:
         Parsed dictionary.
     :rtype: dict
     """
     from pandas import isnull
-    it = [(v[0], v[1] if len(v) == 2 else v[1:]) for v in x if not isnull(v[0])]
-    if merge:
-        d = {}
-        for k, v in it:
-            k = ref(parent, k)
-            if isinstance(k, dict):
-                d.update(k)
-            else:
-                d[k] = v
-    else:
-        d = {k: v for k, v in it}
-    if key is not None:
-        fun = FILTERS[key]
-        d = {fun(parent, k): v for k, v in d.items()}
-    if value is not None:
-        fun = FILTERS[value]
-        d = {k: fun(parent, v) for k, v in d.items()}
-    return d
+    from .parser import compile_filters
+    x = x.items() if isinstance(x, dict) else x
+    it = ((v[0], v[1] if len(v) == 2 else v[1:]) for v in x if not isnull(v[0]))
+    key = key and compile_filters(sh.stlp(key), parent) or (lambda k: k)
+    value = value and compile_filters(sh.stlp(value), parent) or (lambda v: v)
+    return dict(_kv((key(k), value(v)) for k, v in _kv(it)))
 
 
 FILTERS['dict'] = fdict

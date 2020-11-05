@@ -270,11 +270,17 @@ class Ref:
         if 'values' not in self.ref:
             r0, c0, r1, c1 = self.range.get()
             v = self.sheet[r0:r1 + 1, c0:c1 + 1]
-            for d in self.ref['filters']:
-                if isinstance(d, dict):
-                    k = d.pop('fun')
-                else:
-                    k, d = d, {}
-                v = FILTERS[k](self, v, *d.get('args', ()), **d.get('kw', d))
-            self.ref['values'] = v
+            self.ref['values'] = compile_filters(self.ref['filters'], self)(v)
         return self.ref['values']
+
+
+def compile_filters(filters, parent):
+    it = (dict(k) if isinstance(k, dict) else {'fun': k} for k in filters)
+    it = [(v.pop('fun'), v.get('args', ()), v.get('kw', v)) for v in it]
+
+    def call_filters(value):
+        for k, args, kw in it:
+            value = FILTERS[k](parent, value, *args, **kw)
+        return value
+
+    return call_filters

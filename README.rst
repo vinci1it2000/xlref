@@ -137,7 +137,7 @@ dictionary. The code below shows how to do it:
     >>> _ref = 'excel.xlsx#ref!A1(RD):RD[%s]'  # doctest: +SKIP
     >>> ref = xl.Ref(_ref % '"dict"')
     >>> ref.range  # Captured range.
-    B2:C24
+    B2:C25
     >>> values = ref.values; values  # Captured values.
     {...}
     >>> values['st-cell-move']
