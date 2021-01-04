@@ -1,6 +1,16 @@
 Changelog
 =========
 
+v1.1.1 (2021-01-04)
+-------------------
+
+Fix
+~~~
+- (doc): Update copyrights.
+
+- (parser): Use `openpyxl` to read excel files instead `xlrd`.
+
+
 v1.1.0 (2020-11-05)
 -------------------
 
