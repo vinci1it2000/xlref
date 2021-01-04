@@ -89,7 +89,14 @@ class Range:
 class Ref:
     """Reference parser"""
     _curr_dir = '.'
-    _engine = 'xlrd'
+    _engines = {
+        'xlsx': 'openpyxl',
+        'xls': 'xlrd',
+        'odf': 'odf',
+        'ods': 'odf',
+        'odt': 'odf',
+        None: 'pyxlsb'
+    }
     _re = _re_xl_ref_parser
     _open_sheet_kw = {'header': None}
 
@@ -131,7 +138,9 @@ class Ref:
 
     def _open_workbook(self, fpath):
         from pandas import ExcelFile
-        wb = ExcelFile(fpath, self._engine)
+        ext = osp.splitext(fpath.lower())[1][1:]
+        engine = self._engines.get(ext, self._engines[None])
+        wb = ExcelFile(fpath, engine=engine)
         wb.sheet_indices = {k.lower(): i for i, k in enumerate(wb.sheet_names)}
         return wb
 
