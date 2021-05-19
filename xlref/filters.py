@@ -82,7 +82,7 @@ def ref(parent, x):
 FILTERS['ref'] = ref
 
 
-def recursive(parent, x):
+def recursive(parent, x, dtype=None):
     """
     Parse recursively all values in the array.
 
@@ -98,8 +98,8 @@ def recursive(parent, x):
         Parsed array.
     :rtype: numpy.array
     """
-    res, shape = [], np.shape(x)
-    return np.reshape([ref(parent, v) for v in np.ravel(x)], shape)
+    res, shape = [ref(parent, v) for v in np.ravel(x)], np.shape(x)
+    return np.reshape(np.asarray(res, dtype=dtype), shape)
 
 
 FILTERS['recursive'] = recursive
