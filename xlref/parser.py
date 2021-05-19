@@ -25,7 +25,7 @@ _primitive_dir = dict(zip(
 # noinspection RegExpRedundantEscape
 _re_xl_ref_parser = re.compile(
     r"""
-    ^\s*(?:(?P<file>[^!]+)?)?\s*\#\s*                       # xl file name
+    ^\s*(?:(?P<file>[^!#]+)?)?\s*\#\s*                      # xl file name
     (?:(?P<sheet>[^!]+)?!)?\s*                              # xl sheet name
     (?:                                                     # first cell
         (?P<st_col>[A-Z]+|_|\^)\s*                          # first col
