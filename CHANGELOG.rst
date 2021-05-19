@@ -1,6 +1,23 @@
 Changelog
 =========
 
+v1.1.2 (2021-05-19)
+-------------------
+
+Feat
+~~~~
+- (core): Update build scripts.
+
+
+Fix
+~~~
+- (parser): Correct file regex.
+
+- (filter): Correct VisibleDeprecationWarning.
+
+- (doc): Correct readme version.
+
+
 v1.1.1 (2021-01-04)
 -------------------
 
