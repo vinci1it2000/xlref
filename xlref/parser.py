@@ -247,8 +247,9 @@ class Ref:
         for k, i in (('L', 0), ('U', 0), ('R', 1), ('D', 1)):
             exp[:, i] += _primitive_dir[k] * range_exp.count(k)
         # noinspection PyUnresolvedReferences
-        empty, rng = ~self.full_cells, np.array((st, nd), int).T + [0, 1]
-        b = np.array([True])
+        empty, r0 = ~self.full_cells, np.array((st, nd), int)
+        rng = r0.T + [0, 1]
+        b = np.array([all(empty[slice(*rng[0]), slice(*rng[1])].shape)])
         margins = np.array([(m['^'], m['_'] + 1) for m in self.margins]).T
         while b.any():
             empty[slice(*rng[0]), slice(*rng[1])] = True
@@ -258,7 +259,8 @@ class Ref:
                 empty[slice(*r[0]), r[1] - [0, 1]].all(0)
             ])
             rng = np.where(b, r, rng)
-        return list(map(tuple, (rng - [0, 1]).T))
+        r = (rng - [0, 1]).T
+        return tuple(np.minimum(r[0], r0[0])), tuple(np.maximum(r[1], r0[1]))
 
     @property
     def range(self):
@@ -279,6 +281,11 @@ class Ref:
         if 'values' not in self.ref:
             r0, c0, r1, c1 = self.range.get()
             v = self.sheet[r0:r1 + 1, c0:c1 + 1]
+            shape, s = (r1 - r0 + 1, c1 - c0 + 1), tuple(v.shape)
+            if s != shape:  # Add empty values.
+                c = np.full(shape, np.nan, object)
+                c[:s[0], :s[1]] = v
+                v = c
             self.ref['values'] = compile_filters(self.ref['filters'], self)(v)
         return self.ref['values']
 
