@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # !/usr/bin/env python
 #
-# Copyright 2020-2021 Vincenzo Arcidiacono;
+# Copyright 2020-2022 Vincenzo Arcidiacono;
 # Licensed under the EUPL (the 'Licence');
 # You may not use this work except in compliance with the Licence.
 # You may obtain a copy of the Licence at: http://ec.europa.eu/idabc/eupl
@@ -22,7 +22,7 @@ __author__ = 'Vincenzo Arcidiacono <vinci1it2000@gmail.com>'
 
 __license__ = 'EUPL, see LICENSE.txt'
 
-__copyright__ = 'Copyright 2020-2021 Vincenzo Arcidiacono'
+__copyright__ = 'Copyright 2020-2022 Vincenzo Arcidiacono'
 
 if __name__ == '__main__':
     import sys
