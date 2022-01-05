@@ -9,17 +9,17 @@
         ],
         "RANGE": [
           [
-            NaN,
-            NaN,
-            NaN
+            null,
+            null,
+            null
           ],
           [
-            NaN,
+            null,
             1.0,
             2.0
           ],
           [
-            NaN,
+            null,
             4.0,
             5.0
           ]
@@ -44,17 +44,17 @@
         "EXPAND-0": [
           [
             1.0,
-            NaN,
-            NaN
+            null,
+            null
           ],
           [
-            NaN,
+            null,
             2.0,
-            NaN
+            null
           ],
           [
-            NaN,
-            NaN,
+            null,
+            null,
             3.0
           ]
         ],
@@ -66,7 +66,7 @@
           ],
           [
             8.0,
-            NaN,
+            null,
             4.0
           ],
           [
@@ -101,18 +101,18 @@
         "EXPAND-5": [
           [
             1.0,
-            NaN,
+            null,
             2.0,
-            NaN,
+            null,
             1,
             4,
             7
           ],
           [
-            NaN,
-            NaN,
+            null,
+            null,
             3.0,
-            NaN,
+            null,
             2,
             5,
             8
@@ -121,8 +121,8 @@
             6.0,
             5.0,
             4.0,
-            NaN,
-            NaN,
+            null,
+            null,
             6,
             9
           ]
@@ -141,18 +141,56 @@
         "EXPAND-7": [
           [
             1.0,
-            NaN,
-            NaN
+            null,
+            null
           ],
           [
-            NaN,
+            null,
             2.0,
-            NaN
+            null
           ],
           [
-            NaN,
-            NaN,
+            null,
+            null,
             3.0
+          ]
+        ],
+        "EXPAND-8": [
+          [
+            null
+          ]
+        ],
+        "EXPAND-9": [
+          [
+            null,
+            null
+          ],
+          [
+            null,
+            null
+          ]
+        ],
+        "EXPAND-10": [
+          [
+            1,
+            4,
+            7,
+            null,
+            null
+          ],
+          [
+            2,
+            5,
+            8,
+            null,
+            null
+          ],
+          [
+            null,
+            6,
+            9,
+            null,
+            null
           ]
         ],
         "ABSOLUTE": [
@@ -160,63 +198,63 @@
             1.0,
             2.0,
             3.0,
-            NaN,
+            null,
             1.0,
-            NaN,
-            NaN,
-            NaN,
+            null,
+            null,
+            null,
             1,
-            NaN,
-            NaN
+            null,
+            null
           ],
           [
             4.0,
             5.0,
             6.0,
-            NaN,
-            NaN,
+            null,
+            null,
             2.0,
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN
+            null,
+            null,
+            null,
+            null,
+            null
           ],
           [
             7.0,
             8.0,
             9.0,
-            NaN,
-            NaN,
-            NaN,
+            null,
+            null,
+            null,
             3.0,
-            NaN,
-            NaN,
-            NaN,
+            null,
+            null,
+            null,
             2
           ],
           [
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
           ],
           [
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN,
-            NaN,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
             "a",
             "B",
             "c"
@@ -225,24 +263,24 @@
             1.0,
             2.0,
             3.0,
-            NaN,
+            null,
             1.0,
-            NaN,
+            null,
             2.0,
-            NaN,
+            null,
             1,
             4,
             7
           ],
           [
             8.0,
-            NaN,
+            null,
             4.0,
-            NaN,
-            NaN,
-            NaN,
+            null,
+            null,
+            null,
             3.0,
-            NaN,
+            null,
             2,
             5,
             8
@@ -251,12 +289,12 @@
             7.0,
             6.0,
             5.0,
-            NaN,
+            null,
             6.0,
             5.0,
             4.0,
-            NaN,
-            NaN,
+            null,
+            null,
             6,
             9
           ]
@@ -266,7 +304,7 @@
           "a": [
             1,
             2,
-            NaN
+            null
           ],
           "B": [
             4,
@@ -281,13 +319,13 @@
         },
         "FILTER-2": [
           1,
-          NaN,
-          NaN,
-          NaN,
-          NaN,
-          NaN,
-          NaN,
-          NaN,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           2
         ],
         "FILTER-3": [
@@ -333,17 +371,17 @@
           ],
           "range": [
             [
-              NaN,
-              NaN,
-              NaN
+              null,
+              null,
+              null
             ],
             [
-              NaN,
+              null,
               1.0,
               2.0
             ],
             [
-              NaN,
+              null,
               4.0,
               5.0
             ]
@@ -384,7 +422,7 @@
       ],
       [
         8.0,
-        NaN,
+        null,
         4.0
       ],
       [
@@ -403,7 +441,7 @@
           ],
           [
             1.0,
-            NaN,
+            null,
             1.0
           ],
           [
@@ -415,14 +453,14 @@
         "Test2": 1.0,
         "Test3": [
           [
-            NaN
+            null
           ]
         ],
         "test4": {
           "A": [
             1,
             4,
-            NaN
+            null
           ],
           "B": [
             2,
@@ -432,7 +470,7 @@
           "c": [
             3,
             6,
-            NaN
+            null
           ]
         },
         "test5": [
@@ -494,7 +532,7 @@
           ],
           [
             1.0,
-            NaN,
+            null,
             1.0
           ],
           [

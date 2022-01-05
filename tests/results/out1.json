@@ -7,17 +7,17 @@
     ],
     "range": [
       [
-        NaN,
-        NaN,
-        NaN
+        null,
+        null,
+        null
       ],
       [
-        NaN,
+        null,
         1.0,
         2.0
       ],
       [
-        NaN,
+        null,
         4.0,
         5.0
       ]
@@ -42,17 +42,17 @@
     "expand-0": [
       [
         1.0,
-        NaN,
-        NaN
+        null,
+        null
       ],
       [
-        NaN,
+        null,
         2.0,
-        NaN
+        null
       ],
       [
-        NaN,
-        NaN,
+        null,
+        null,
         3.0
       ]
     ],
@@ -64,7 +64,7 @@
       ],
       [
         8.0,
-        NaN,
+        null,
         4.0
       ],
       [
@@ -99,18 +99,18 @@
     "expand-5": [
       [
         1.0,
-        NaN,
+        null,
         2.0,
-        NaN,
+        null,
         1,
         4,
         7
       ],
       [
-        NaN,
-        NaN,
+        null,
+        null,
         3.0,
-        NaN,
+        null,
         2,
         5,
         8
@@ -119,8 +119,8 @@
         6.0,
         5.0,
         4.0,
-        NaN,
-        NaN,
+        null,
+        null,
         6,
         9
       ]
@@ -139,18 +139,56 @@
     "expand-7": [
       [
         1.0,
-        NaN,
-        NaN
+        null,
+        null
       ],
       [
-        NaN,
+        null,
         2.0,
-        NaN
+        null
       ],
       [
-        NaN,
-        NaN,
+        null,
+        null,
         3.0
+      ]
+    ],
+    "expand-8": [
+      [
+        null
+      ]
+    ],
+    "expand-9": [
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "expand-10": [
+      [
+        1,
+        4,
+        7,
+        null,
+        null
+      ],
+      [
+        2,
+        5,
+        8,
+        null,
+        null
+      ],
+      [
+        null,
+        6,
+        9,
+        null,
+        null
       ]
     ],
     "absolute": [
@@ -158,63 +196,63 @@
         1.0,
         2.0,
         3.0,
-        NaN,
+        null,
         1.0,
-        NaN,
-        NaN,
-        NaN,
+        null,
+        null,
+        null,
         1,
-        NaN,
-        NaN
+        null,
+        null
       ],
       [
         4.0,
         5.0,
         6.0,
-        NaN,
-        NaN,
+        null,
+        null,
         2.0,
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN
+        null,
+        null,
+        null,
+        null,
+        null
       ],
       [
         7.0,
         8.0,
         9.0,
-        NaN,
-        NaN,
-        NaN,
+        null,
+        null,
+        null,
         3.0,
-        NaN,
-        NaN,
-        NaN,
+        null,
+        null,
+        null,
         2
       ],
       [
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
       ],
       [
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN,
-        NaN,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         "a",
         "B",
         "c"
@@ -223,24 +261,24 @@
         1.0,
         2.0,
         3.0,
-        NaN,
+        null,
         1.0,
-        NaN,
+        null,
         2.0,
-        NaN,
+        null,
         1,
         4,
         7
       ],
       [
         8.0,
-        NaN,
+        null,
         4.0,
-        NaN,
-        NaN,
-        NaN,
+        null,
+        null,
+        null,
         3.0,
-        NaN,
+        null,
         2,
         5,
         8
@@ -249,12 +287,12 @@
         7.0,
         6.0,
         5.0,
-        NaN,
+        null,
         6.0,
         5.0,
         4.0,
-        NaN,
-        NaN,
+        null,
+        null,
         6,
         9
       ]
@@ -264,7 +302,7 @@
       "a": [
         1,
         2,
-        NaN
+        null
       ],
       "B": [
         4,
@@ -279,13 +317,13 @@
     },
     "filter-2": [
       1,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
       2
     ],
     "filter-3": [
@@ -331,17 +369,17 @@
       ],
       "range": [
         [
-          NaN,
-          NaN,
-          NaN
+          null,
+          null,
+          null
         ],
         [
-          NaN,
+          null,
           1.0,
           2.0
         ],
         [
-          NaN,
+          null,
           4.0,
           5.0
         ]
@@ -364,6 +402,6 @@
     ],
     "error-1": null,
     "error-2": null,
-    "#origin!a3:b4[\"recursive\", \"dict\"]": NaN
+    "#origin!a3:b4[\"recursive\", \"dict\"]": null
   }
 ]
