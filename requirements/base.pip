@@ -4,3 +4,4 @@ schedula>=1.1.1
 click
 click-log
 openpyxl
+simplejson

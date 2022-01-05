@@ -122,8 +122,8 @@ def save_json(output_fpath, data):
         File path where output are written.
     :rtype: str
     """
-    import json
+    import simplejson as json
     os.makedirs(osp.dirname(output_fpath) or '.', exist_ok=True)
     with open(output_fpath, 'w') as file:
-        json.dump(data, file, default=_json_default)
+        json.dump(data, file, default=_json_default, ignore_nan=True)
     return output_fpath

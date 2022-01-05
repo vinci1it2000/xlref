@@ -126,7 +126,8 @@ if __name__ == '__main__':
             'schedula>=1.1.1',
             'numpy',
             'pandas',
-            'openpyxl'
+            'openpyxl',
+            'simplejson'
         ],
         entry_points={
             'console_scripts': [
