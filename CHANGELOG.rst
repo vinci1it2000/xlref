@@ -1,6 +1,25 @@
 Changelog
 =========
 
+v1.2.0 (2022-01-05)
+-------------------
+
+Feat
+~~~~
+- (doc): Update copyright.
+
+- (actions): Replace travis with github actions.
+
+- (test): Add new test cases.
+
+- (cli): Use `simplejson` to dump parsed data.
+
+
+Fix
+~~~
+- (parser): Correct range expansion when is empty.
+
+
 v1.1.2 (2021-05-19)
 -------------------
 
