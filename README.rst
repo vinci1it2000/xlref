@@ -3,7 +3,7 @@
 ##########################
 xlref: Excel table reader.
 ##########################
-|pypi_ver| |travis_status| |cover_status| |docs_status| |dependencies|
+|pypi_ver| |test_status| |cover_status| |docs_status| |dependencies|
 |github_issues| |python_ver| |proj_license|
 
 :release:       1.1.2
@@ -137,7 +137,7 @@ dictionary. The code below shows how to do it:
     >>> _ref = 'excel.xlsx#ref!A1(RD):RD[%s]'  # doctest: +SKIP
     >>> ref = xl.Ref(_ref % '"dict"')
     >>> ref.range  # Captured range.
-    B2:C25
+    B2:C28
     >>> values = ref.values; values  # Captured values.
     {...}
     >>> values['st-cell-move']
@@ -180,9 +180,9 @@ follows:
 .. _end-1-pypi:
 .. _start-badges:
 
-.. |travis_status| image:: https://travis-ci.org/vinci1it2000/xlref.svg?branch=master
-    :alt: Travis build status
-    :target: https://travis-ci.org/vinci1it2000/xlref
+.. |test_status| image:: https://github.com/vinci1it2000/xlref/actions/workflows/tests.yml/badge.svg?branch=master
+    :alt: Build status
+    :target: https://github.com/vinci1it2000/xlref/actions/workflows/tests.yml?query=branch%3Amaster
 
 .. |cover_status| image:: https://coveralls.io/repos/github/vinci1it2000/xlref/badge.svg?branch=master
     :target: https://coveralls.io/github/vinci1it2000/xlref?branch=master
