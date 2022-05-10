@@ -1,6 +1,25 @@
 Changelog
 =========
 
+v1.2.1 (2022-05-10)
+-------------------
+
+Feat
+~~~~
+- (parser): Add open method to open files with custom modules.
+
+- (parser): Add method to read csv files.
+
+
+Fix
+~~~
+- (tests): Correct test cases.
+
+- (parser): Correct bug when empty table.
+
+- (filters): Remove warning.
+
+
 v1.2.0 (2022-01-05)
 -------------------
 
