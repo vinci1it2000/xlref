@@ -99,6 +99,8 @@ def recursive(parent, x, dtype=None):
     :rtype: numpy.array
     """
     res, shape = [ref(parent, v) for v in np.ravel(x)], np.shape(x)
+    if dtype is None and isinstance(x, np.ndarray):
+        dtype = x.dtype
     return np.reshape(np.asarray(res, dtype=dtype), shape)
 
 
