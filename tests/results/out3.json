@@ -521,7 +521,7 @@
         ],
         "test10": null,
         "test11": {
-          "#Sheet2!B2:[\"item\"]": "5",
+          "#Sheet2!B2:[\"item\"]": 5,
           "#Sheet2!B3:[\"item\"]": "#Sheet2!C3:[\"item\"]"
         },
         "test12": [
