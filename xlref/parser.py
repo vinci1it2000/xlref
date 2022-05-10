@@ -95,10 +95,12 @@ class Ref:
         'odf': 'odf',
         'ods': 'odf',
         'odt': 'odf',
+        'csv': 'none',
         None: 'pyxlsb'
     }
     _re = _re_xl_ref_parser
     _open_sheet_kw = {'header': None}
+    _open = open
 
     def _match(self, ref):
         m = self._re.match(ref)
@@ -140,8 +142,22 @@ class Ref:
         from pandas import ExcelFile
         ext = osp.splitext(fpath.lower())[1][1:]
         engine = self._engines.get(ext, self._engines[None])
-        wb = ExcelFile(fpath, engine=engine)
-        wb.sheet_indices = {k.lower(): i for i, k in enumerate(wb.sheet_names)}
+
+        if engine == 'none':
+            ExcelFile._engines['none'] = lambda *args, **kwargs: None
+            import io
+            wb = ExcelFile(io.BytesIO(), engine=engine)
+            wb.sheet_indices = {'sheet1': 0}
+        else:
+            wb = ExcelFile(self._open(fpath, 'rb'), engine=engine)
+            wb.sheet_indices = {
+                k.lower(): i for i, k in enumerate(wb.sheet_names)
+            }
+        if ext in ('csv',):
+            import pandas as pd
+            sn = {j: i for i, j in wb.sheet_indices.items()}[0]
+            with self._open(fpath, 'rb') as f:
+                self.cache[(wb, sn)] = pd.read_csv(f, header=None).values
         return wb
 
     def _open_sheet(self, workbook, name):
@@ -171,6 +187,8 @@ class Ref:
     def sheet(self):
         if 'xl_sheet' not in self.ref:
             sn = self.ref['sheet']
+            if not sn and not self.parent:
+                sn = {j: i for i, j in self.book.sheet_indices.items()}[0]
             if sn:
                 wb, sn = self.book, sn.lower()
                 if (wb, sn) in self.cache:

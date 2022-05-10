@@ -19,7 +19,8 @@ files_dir = osp.join(test_dir, 'files')
 results_dir = osp.join(test_dir, 'results')
 files = dict(
     xl=osp.join(test_dir, 'files', 'excel.xlsx'),
-    json=osp.join(test_dir, 'files', 'test.json')
+    json=osp.join(test_dir, 'files', 'test.json'),
+    csv=osp.join(test_dir, 'files', 'test.csv')
 )
 
 
@@ -49,6 +50,7 @@ class TestCMD(unittest.TestCase):
             (['out3.json', '%s#origin!A1["recursive"]' % files['xl'], '-F',
               files['json']], 0, 1),
             (['out4.json', '-F', files['json'], '-F', files['json']], 0, 1),
+            (['out5.json', '%s#A1:..:DR' % files['csv']], 0, 1),
     ))
     def test_read(self, data):
         args, exit_code, file = data
