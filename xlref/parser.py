@@ -211,8 +211,11 @@ class Ref:
     def margins(self):
         if 'margins' not in self.ref:
             indices = np.array(np.where(self.full_cells)).T
-            up_r, up_c = indices.min(0)
-            dn_r, dn_c = indices.max(0)
+            if indices.shape[0]:
+                up_r, up_c = indices.min(0)
+                dn_r, dn_c = indices.max(0)
+            else:
+                up_r = up_c = dn_r = dn_c = 0
             m = {'^': up_r, '_': dn_r}, {'^': up_c, '_': dn_c}
             self.ref['margins'] = m
         return self.ref['margins']
