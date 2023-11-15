@@ -137,6 +137,6 @@ if __name__ == '__main__':
                 '%(p)s = %(p)s.cli:cli' % {'p': name},
             ],
         },
-        tests_require=['nose>=1.0', 'ddt'],
+        tests_require=['ddt'],
         test_suite='nose.collector',
     )
