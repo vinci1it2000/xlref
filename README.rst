@@ -3,7 +3,7 @@
 ##########################
 xlref: Excel table reader.
 ##########################
-|pypi_ver| |test_status| |cover_status| |docs_status| |dependencies|
+|pypi_ver| |test_status| |cover_status| |docs_status|
 |github_issues| |python_ver| |proj_license|
 
 :release:       1.2.1
@@ -208,8 +208,5 @@ follows:
     :target: https://raw.githubusercontent.com/vinci1it2000/xlref/master/LICENSE.txt
     :alt: Project License
 
-.. |dependencies| image:: https://img.shields.io/requires/github/vinci1it2000/xlref.svg?
-    :target: https://requires.io/github/vinci1it2000/xlref/requirements/?branch=master
-    :alt: Dependencies up-to-date?
 
 .. _end-badges:
