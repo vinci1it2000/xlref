@@ -79,7 +79,11 @@ if __name__ == '__main__':
             print('LONG DESCRIPTION ENABLED!')
         except Exception as ex:
             print('LONG DESCRIPTION ERROR:\n %r', ex)
-
+    extras = {'dev': [
+        'wheel', 'sphinx>=7.2', 'gitchangelog', 'mako', 'sphinx_rtd_theme',
+        'setuptools>=36.0.1', 'sphinxcontrib-restbuilder', 'coveralls', 'ddt',
+        'twine', 'sphinx-click'
+    ]}
     setup(
         name=name,
         version=proj_ver,
@@ -137,6 +141,7 @@ if __name__ == '__main__':
                 '%(p)s = %(p)s.cli:cli' % {'p': name},
             ],
         },
+        extras_require=extras,
         tests_require=['ddt'],
         test_suite='nose.collector',
     )

@@ -2,11 +2,10 @@
 -r test.pip
 
 wheel
-sphinx
+sphinx>=7.2
 gitchangelog
 mako
 sphinx_rtd_theme
-readthedocs-sphinx-ext
 setuptools>=36.0.1
 sphinxcontrib-restbuilder
 sphinx-click
