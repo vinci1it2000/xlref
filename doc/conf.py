@@ -51,7 +51,7 @@ extensions = [
 ]
 
 extlinks = {
-    'gh': ('https://github.com/vinci1it2000/xlref/issues/%s', '#'),
+    'gh': ('https://github.com/vinci1it2000/xlref/issues/%s', '#%s'),
 }
 
 autosummary_generate = True
