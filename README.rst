@@ -6,8 +6,8 @@ xlref: Excel table reader.
 |pypi_ver| |test_status| |cover_status| |docs_status|
 |github_issues| |python_ver| |proj_license|
 
-:release:       1.2.1
-:date:          2022-05-10 09:55:00
+:release:       1.2.2
+:date:          2023-11-15 11:30:00
 :repository:    https://github.com/vinci1it2000/xlref
 :pypi-repo:     https://pypi.org/project/xlref/
 :docs:          http://xlref.readthedocs.io/

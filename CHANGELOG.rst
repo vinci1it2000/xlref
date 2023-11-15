@@ -1,6 +1,31 @@
 Changelog
 =========
 
+v1.2.2 (2023-11-15)
+-------------------
+
+Feat
+~~~~
+- (setup): Add missing dependencies.
+
+- (bin): Update publish script.
+
+- (doc): Update copyright.
+
+- (test): Use `unittest` for testing instead `nose`.
+
+- (core): Add support for python 3.10 and 3.11.
+
+- (doc): Add Read the Docs configuration file.
+
+
+Fix
+~~~
+- (parser): Avoid leaving open file.
+
+- (doc): Remove broken badge.
+
+
 v1.2.1 (2022-05-10)
 -------------------
 
