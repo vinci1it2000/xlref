@@ -8,6 +8,7 @@
 """
 It provides xlparser reference parser class.
 """
+import io
 import re
 import string
 import logging
@@ -145,11 +146,11 @@ class Ref:
 
         if engine == 'none':
             ExcelFile._engines['none'] = lambda *args, **kwargs: None
-            import io
             wb = ExcelFile(io.BytesIO(), engine=engine)
             wb.sheet_indices = {'sheet1': 0}
         else:
-            wb = ExcelFile(self._open(fpath, 'rb'), engine=engine)
+            with self._open(fpath, 'rb') as f:
+                wb = ExcelFile(io.BytesIO(f.read()), engine=engine)
             wb.sheet_indices = {
                 k.lower(): i for i, k in enumerate(wb.sheet_names)
             }
