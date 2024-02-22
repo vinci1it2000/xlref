@@ -92,12 +92,15 @@ class Ref:
     _curr_dir = '.'
     _engines = {
         'xlsx': 'openpyxl',
+        'xlsxm': 'openpyxl',
         'xls': 'xlrd',
+        'xlsm': 'xlrd',
         'odf': 'odf',
         'ods': 'odf',
         'odt': 'odf',
         'csv': 'none',
-        None: 'pyxlsb'
+        'xlsb': 'pyxlsb',
+        None: 'openpyxl'
     }
     _re = _re_xl_ref_parser
     _open_sheet_kw = {'header': None}
