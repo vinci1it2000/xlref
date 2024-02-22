@@ -1,6 +1,18 @@
 Changelog
 =========
 
+v1.2.3 (2024-02-22)
+-------------------
+
+Fix
+~~~
+- (parser): Update default reader engine and add macro files.
+
+- (doc): Correct issues links.
+
+- (setup): Correct setup config file.
+
+
 v1.2.2 (2023-11-15)
 -------------------
 
