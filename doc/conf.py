@@ -76,7 +76,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'xlref'
-copyright = '2020-2023 Vincenzo Arcidiacono'
+copyright = '2020-2024 Vincenzo Arcidiacono'
 author = 'Vincenzo Arcidiacono'
 
 # The version info for the project you're documenting, acts as replacement for
