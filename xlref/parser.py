@@ -94,7 +94,7 @@ class Ref:
         'xlsx': 'openpyxl',
         'xlsxm': 'openpyxl',
         'xls': 'xlrd',
-        'xlsm': 'xlrd',
+        'xlsm': 'openpyxl',
         'odf': 'odf',
         'ods': 'odf',
         'odt': 'odf',
